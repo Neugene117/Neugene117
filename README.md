@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/profile-hero.svg" alt="EUGENE PRO terminal dashboard with a profile portrait above a masked hacker saying Be careful, animated code rain, and electron trails" width="100%" />
+<img src="./assets/profile-hero.svg" alt="EUGENE PRO terminal dashboard with Eugene's ne.jpg photo in the visual map, animated code rain, and electron trails" width="100%" />
 
 [![GitHub](https://img.shields.io/badge/GitHub-Neugene117-101827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Neugene117)
 [![Email](https://img.shields.io/badge/Email-Say%20hello-101827?style=for-the-badge&logo=gmail&logoColor=EA6B83)](mailto:nendayishimiye@gmail.com)
