@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">Eugene's digital workshop</title>
+  <desc id="desc">A neon night sky over an abstract city grid, with the words Build with curiosity.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101326"/><stop offset=".56" stop-color="#171632"/><stop offset="1" stop-color="#092a32"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#bf7bff"/><stop offset=".52" stop-color="#63e5df"/><stop offset="1" stop-color="#a7f06b"/>
+    </linearGradient>
+    <radialGradient id="halo"><stop stop-color="#7552a9" stop-opacity=".42"/><stop offset="1" stop-color="#7552a9" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0v34" fill="none" stroke="#8adad1" stroke-opacity=".11" stroke-width="1"/></pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+  </defs>
+  <rect width="1200" height="330" rx="24" fill="url(#bg)"/>
+  <ellipse cx="832" cy="88" rx="310" ry="180" fill="url(#halo)"/>
+  <circle cx="968" cy="40" r="72" fill="#62e8dc" opacity=".13" filter="url(#soft)"/>
+  <rect y="0" width="1200" height="330" rx="24" fill="url(#grid)"/>
+  <path d="M0 253 145 226l112 18 132-60 148 30 124-76 144 34 139-81 111 26 145-61v274H0Z" fill="#13142b" opacity=".88"/>
+  <path d="M0 277 145 250l112 18 132-60 148 30 124-76 144 34 139-81 111 26 145-61v250H0Z" fill="none" stroke="url(#glow)" stroke-opacity=".48" stroke-width="2"/>
+  <g fill="#a9f4ea" opacity=".58">
+    <circle cx="91" cy="52" r="1.6"/><circle cx="187" cy="94" r="1.3"/><circle cx="337" cy="45" r="1.7"/><circle cx="460" cy="91" r="1.2"/><circle cx="700" cy="48" r="1.5"/><circle cx="1108" cy="101" r="1.4"/><circle cx="1040" cy="191" r="1.6"/>
+  </g>
+  <g fill="#6de8d8" opacity=".54">
+    <path d="M188 260h8v-15h-8zm17 0h8v-26h-8zm18 0h8v-19h-8z"/>
+    <path d="M493 260h8v-17h-8zm17 0h8v-32h-8zm18 0h8v-23h-8z"/>
+    <path d="M825 260h8v-18h-8zm17 0h8v-30h-8zm18 0h8v-20h-8z"/>
+  </g>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <rect x="74" y="52" width="206" height="31" rx="15.5" fill="#242442" stroke="#7770ae" stroke-opacity=".6"/>
+    <circle cx="93" cy="67.5" r="4" fill="#a7f06b"><animate attributeName="opacity" values="1;.35;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <text x="107" y="72" fill="#c8c7e3" font-size="12" letter-spacing="2.1">DIGITAL WORKSHOP · 001</text>
+    <text x="72" y="153" fill="#f6f4ff" font-size="51" font-weight="700" letter-spacing="-1.8">Build with</text>
+    <text x="72" y="212" fill="url(#glow)" font-size="57" font-weight="700" letter-spacing="-1.7">curiosity.</text>
+    <text x="76" y="246" fill="#c5c8dc" font-size="15" letter-spacing=".7">Ideas into useful things on the web.</text>
+    <text x="1055" y="295" fill="#b5b4d3" font-size="11" letter-spacing="2">EUGENE · WEB / CODE</text>
+  </g>
+  <g transform="translate(979 146)">
+    <circle r="42" fill="#75e8dc" opacity=".07"><animate attributeName="r" values="38;48;38" dur="5s" repeatCount="indefinite"/></circle>
+    <circle r="31" fill="none" stroke="#79e7db" stroke-opacity=".42" stroke-dasharray="3 7"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/></circle>
+    <path d="M-13 0 0-13 13 0 0 13Z" fill="none" stroke="#9df0cc" stroke-width="1.5"/>
+    <circle r="4" fill="#bd8cff"/>
+  </g>
+</svg>
