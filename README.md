@@ -1,15 +1,11 @@
 <div align="center">
 
-<img src="./assets/profile-hero.svg" alt="EUGENE PRO — animated neon portrait with falling code and glowing electron trails" width="100%" />
+<img src="./assets/profile-hero.svg" alt="EUGENE PRO profile portrait above a masked hacker saying Be careful, surrounded by falling code and animated electron trails" width="100%" />
 
 [![GitHub](https://img.shields.io/badge/GitHub-Neugene117-101827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Neugene117)
 [![Email](https://img.shields.io/badge/Email-Say%20hello-101827?style=for-the-badge&logo=gmail&logoColor=EA6B83)](mailto:nendayishimiye@gmail.com)
 
-**Software engineer building for the web.**
-
 </div>
-
-## The toolkit
 
 <div align="center">
 
@@ -26,11 +22,7 @@
 
 </div>
 
-## A signal from the night shift
-
 <div align="center">
-
-<img src="./assets/hacker-sentinel.svg" alt="A masked hacker in a neon-lit hood says: Be careful." width="500" />
 
 [Explore my projects →](https://github.com/Neugene117?tab=repositories)
 
