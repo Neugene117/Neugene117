@@ -1,92 +1,86 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" role="img" aria-labelledby="title desc">
-  <title id="title">EUGENE PRO — software engineer and web developer</title>
-  <desc id="desc">EUGENE PRO above a neon profile portrait and masked hacker saying Be careful, framed by falling code and glowing electron trails.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 790" role="img" aria-labelledby="title desc">
+  <title id="title">EUGENE PRO — live developer profile</title>
+  <desc id="desc">A terminal-inspired developer profile with a portrait above a masked hacker saying Be careful, animated code rain, and electron trails converging on the portrait.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#101326"/><stop offset=".53" stop-color="#171632"/><stop offset="1" stop-color="#092a32"/>
-    </linearGradient>
-    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#bd83ff"/><stop offset=".5" stop-color="#63e5df"/><stop offset="1" stop-color="#a7f06b"/>
-    </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#272747"/><stop offset="1" stop-color="#102c35"/>
-    </linearGradient>
-    <linearGradient id="hood" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#515073"/><stop offset=".45" stop-color="#24243d"/><stop offset="1" stop-color="#121a2d"/>
-    </linearGradient>
-    <linearGradient id="mask" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#33354f"/><stop offset="1" stop-color="#171b2d"/>
-    </linearGradient>
-    <radialGradient id="aura"><stop stop-color="#7860bb" stop-opacity=".4"/><stop offset="1" stop-color="#7860bb" stop-opacity="0"/></radialGradient>
-    <radialGradient id="portraitGlow"><stop stop-color="#70e7dc" stop-opacity=".29"/><stop offset="1" stop-color="#70e7dc" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0v36" fill="none" stroke="#9cebe1" stroke-opacity=".08"/></pattern>
-    <filter id="soft"><feGaussianBlur stdDeviation="28"/></filter>
-    <filter id="panelShadow" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#050713" flood-opacity=".5"/></filter>
-    <filter id="electronGlow" x="-250%" y="-250%" width="600%" height="600%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <clipPath id="frame"><rect width="1440" height="860" rx="28"/></clipPath>
-    <clipPath id="portraitClip"><rect x="925" y="68" width="340" height="378" rx="170"/></clipPath>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c111c"/><stop offset=".55" stop-color="#091522"/><stop offset="1" stop-color="#101725"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b06dff"/><stop offset=".48" stop-color="#4ccbe5"/><stop offset="1" stop-color="#28d9ae"/></linearGradient>
+    <linearGradient id="type" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c07dff"/><stop offset="1" stop-color="#64e9dc"/></linearGradient>
+    <linearGradient id="hood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#515073"/><stop offset=".45" stop-color="#24243d"/><stop offset="1" stop-color="#121a2d"/></linearGradient>
+    <linearGradient id="mask" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#33354f"/><stop offset="1" stop-color="#171b2d"/></linearGradient>
+    <radialGradient id="aura"><stop stop-color="#1f90a5" stop-opacity=".22"/><stop offset="1" stop-color="#1f90a5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="portraitLight"><stop stop-color="#55ddd0" stop-opacity=".3"/><stop offset="1" stop-color="#55ddd0" stop-opacity="0"/></radialGradient>
+    <pattern id="scanlines" width="4" height="5" patternUnits="userSpaceOnUse"><path d="M0 4.5H4" stroke="#b6d9e8" stroke-opacity=".055"/></pattern>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#55d9e8" fill-opacity=".42"/></pattern>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" fill="none" stroke="#76d9df" stroke-opacity=".045"/></pattern>
+    <filter id="glow" x="-250%" y="-250%" width="600%" height="600%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.5"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#03070c" flood-opacity=".6"/></filter>
+    <clipPath id="outer"><rect x="12" y="12" width="1416" height="766" rx="22"/></clipPath>
+    <clipPath id="visual"><rect x="35" y="118" width="610" height="620" rx="18"/></clipPath>
+    <clipPath id="avatar"><circle cx="340" cy="263" r="94"/></clipPath>
   </defs>
-  <rect width="1440" height="860" rx="28" fill="url(#bg)"/>
-  <rect width="1440" height="860" rx="28" fill="url(#grid)"/>
-  <ellipse cx="1067" cy="227" rx="390" ry="300" fill="url(#aura)">
-    <animate attributeName="opacity" values=".7;1;.7" dur="12s" repeatCount="indefinite"/>
-    <animate attributeName="rx" values="360;405;360" dur="16s" repeatCount="indefinite"/>
-  </ellipse>
-  <circle cx="1094" cy="218" r="172" fill="url(#portraitGlow)" filter="url(#soft)">
-    <animate attributeName="opacity" values=".55;.92;.55" dur="8s" repeatCount="indefinite"/>
-  </circle>
 
-  <!-- Falling code, kept low contrast behind the headline and portrait. -->
-  <g fill="#75e9d9" opacity=".2" font-family="Consolas,monospace" font-size="14">
-    <g transform="translate(120 -470)"><text x="0" y="0">01<tspan x="0" y="34">{ }</tspan><tspan x="0" y="68">&lt;/&gt;</tspan><tspan x="0" y="102">10</tspan><tspan x="0" y="136">=&gt;</tspan><tspan x="0" y="170">01</tspan><tspan x="0" y="204">{ }</tspan><tspan x="0" y="238">101</tspan><tspan x="0" y="272">&lt;/&gt;</tspan><tspan x="0" y="306">010</tspan><tspan x="0" y="340">{ }</tspan><tspan x="0" y="374">10</tspan><tspan x="0" y="408">=&gt;</tspan><tspan x="0" y="442">01</tspan><tspan x="0" y="476">{ }</tspan><tspan x="0" y="510">101</tspan><tspan x="0" y="544">&lt;/&gt;</tspan><tspan x="0" y="578">01</tspan><tspan x="0" y="612">{ }</tspan><tspan x="0" y="646">10</tspan><tspan x="0" y="680">01</tspan><tspan x="0" y="714">&lt;/&gt;</tspan><tspan x="0" y="748">{ }</tspan><tspan x="0" y="782">10</tspan><tspan x="0" y="816">01</tspan></text><animateTransform attributeName="transform" type="translate" values="120 -470;120 0" dur="10s" repeatCount="indefinite"/></g>
-    <g transform="translate(246 -270)" opacity=".7"><text x="0" y="0">&lt;/&gt;<tspan x="0" y="34">10</tspan><tspan x="0" y="68">{ }</tspan><tspan x="0" y="102">011</tspan><tspan x="0" y="136">=&gt;</tspan><tspan x="0" y="170">10</tspan><tspan x="0" y="204">&lt;/&gt;</tspan><tspan x="0" y="238">01</tspan><tspan x="0" y="272">{ }</tspan><tspan x="0" y="306">10</tspan><tspan x="0" y="340">&lt;/&gt;</tspan><tspan x="0" y="374">01</tspan><tspan x="0" y="408">=&gt;</tspan><tspan x="0" y="442">10</tspan><tspan x="0" y="476">{ }</tspan><tspan x="0" y="510">011</tspan><tspan x="0" y="544">&lt;/&gt;</tspan><tspan x="0" y="578">01</tspan><tspan x="0" y="612">10</tspan><tspan x="0" y="646">{ }</tspan><tspan x="0" y="680">=&gt;</tspan><tspan x="0" y="714">01</tspan><tspan x="0" y="748">10</tspan></text><animateTransform attributeName="transform" type="translate" values="246 -270;246 0" dur="8s" begin="-3s" repeatCount="indefinite"/></g>
-    <g transform="translate(392 -560)" opacity=".55"><text x="0" y="0">{ }<tspan x="0" y="34">01</tspan><tspan x="0" y="68">&lt;/&gt;</tspan><tspan x="0" y="102">10</tspan><tspan x="0" y="136">=&gt;</tspan><tspan x="0" y="170">01</tspan><tspan x="0" y="204">{ }</tspan><tspan x="0" y="238">101</tspan><tspan x="0" y="272">10</tspan><tspan x="0" y="306">&lt;/&gt;</tspan><tspan x="0" y="340">01</tspan><tspan x="0" y="374">{ }</tspan><tspan x="0" y="408">10</tspan><tspan x="0" y="442">01</tspan><tspan x="0" y="476">&lt;/&gt;</tspan><tspan x="0" y="510">{ }</tspan><tspan x="0" y="544">10</tspan><tspan x="0" y="578">01</tspan><tspan x="0" y="612">=&gt;</tspan><tspan x="0" y="646">{ }</tspan><tspan x="0" y="680">10</tspan><tspan x="0" y="714">01</tspan></text><animateTransform attributeName="transform" type="translate" values="392 -560;392 0" dur="11s" begin="-6s" repeatCount="indefinite"/></g>
-    <g transform="translate(540 -350)" opacity=".65"><text x="0" y="0">10<tspan x="0" y="34">&lt;/&gt;</tspan><tspan x="0" y="68">01</tspan><tspan x="0" y="102">{ }</tspan><tspan x="0" y="136">=&gt;</tspan><tspan x="0" y="170">10</tspan><tspan x="0" y="204">01</tspan><tspan x="0" y="238">&lt;/&gt;</tspan><tspan x="0" y="272">{ }</tspan><tspan x="0" y="306">10</tspan><tspan x="0" y="340">01</tspan><tspan x="0" y="374">=&gt;</tspan><tspan x="0" y="408">&lt;/&gt;</tspan><tspan x="0" y="442">10</tspan><tspan x="0" y="476">{ }</tspan><tspan x="0" y="510">01</tspan><tspan x="0" y="544">10</tspan><tspan x="0" y="578">&lt;/&gt;</tspan><tspan x="0" y="612">{ }</tspan><tspan x="0" y="646">01</tspan><tspan x="0" y="680">10</tspan><tspan x="0" y="714">=&gt;</tspan><tspan x="0" y="748">01</tspan></text><animateTransform attributeName="transform" type="translate" values="540 -350;540 0" dur="9s" begin="-1.5s" repeatCount="indefinite"/></g>
-    <g transform="translate(1365 -500)" opacity=".56"><text x="0" y="0">&lt;/&gt;<tspan x="0" y="34">{ }</tspan><tspan x="0" y="68">01</tspan><tspan x="0" y="102">10</tspan><tspan x="0" y="136">=&gt;</tspan><tspan x="0" y="170">&lt;/&gt;</tspan><tspan x="0" y="204">01</tspan><tspan x="0" y="238">10</tspan><tspan x="0" y="272">{ }</tspan><tspan x="0" y="306">=&gt;</tspan><tspan x="0" y="340">01</tspan><tspan x="0" y="374">10</tspan><tspan x="0" y="408">&lt;/&gt;</tspan><tspan x="0" y="442">{ }</tspan><tspan x="0" y="476">01</tspan><tspan x="0" y="510">10</tspan><tspan x="0" y="544">=&gt;</tspan><tspan x="0" y="578">{ }</tspan><tspan x="0" y="612">01</tspan><tspan x="0" y="646">&lt;/&gt;</tspan><tspan x="0" y="680">10</tspan><tspan x="0" y="714">{ }</tspan></text><animateTransform attributeName="transform" type="translate" values="1365 -500;1365 0" dur="12s" begin="-5s" repeatCount="indefinite"/></g>
+  <rect width="1440" height="790" rx="26" fill="url(#screen)"/>
+  <rect width="1440" height="790" rx="26" fill="url(#grid)"/>
+  <ellipse cx="344" cy="438" rx="340" ry="370" fill="url(#aura)"><animate attributeName="opacity" values=".55;.95;.55" dur="11s" repeatCount="indefinite"/></ellipse>
+  <rect x="12" y="12" width="1416" height="766" rx="22" fill="none" stroke="url(#edge)" stroke-width="2"/>
+
+  <!-- Terminal title bar -->
+  <g font-family="Consolas,'Courier New',monospace">
+    <circle cx="39" cy="39" r="6" fill="#ff5d68"/><circle cx="61" cy="39" r="6" fill="#ffbd4a"/><circle cx="83" cy="39" r="6" fill="#25c69a"/>
+    <text x="720" y="44" text-anchor="middle" fill="#98a8c3" font-size="13" letter-spacing="1">eugene@devos  ~  $ ./profile.sh --live</text>
+    <circle cx="1337" cy="39" r="4" fill="#31dfb7"><animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="1350" y="44" fill="#54dfc3" font-size="10" letter-spacing="1.1">ONLINE</text>
   </g>
 
-  <!-- Quiet frame and horizon keep the scene structured. -->
-  <path d="M0 452 158 418l130 23 148-67 142 28 145-83 121 31 145-99 130 22 141-73 180 38v302H0Z" fill="#101326" opacity=".48"/>
-  <path d="M0 455 158 421l130 23 148-67 142 28 145-83 121 31 145-99 130 22 141-73 180 38" fill="none" stroke="url(#neon)" stroke-opacity=".24" stroke-width="2"/>
+  <!-- Two clean panes echo a terminal dashboard. -->
+  <rect x="35" y="118" width="610" height="620" rx="18" fill="#07111d" fill-opacity=".8" stroke="#155268" stroke-width="1.5"/>
+  <rect x="663" y="118" width="742" height="620" rx="18" fill="#07111d" fill-opacity=".82" stroke="#155268" stroke-width="1.5"/>
+  <g font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" letter-spacing="2">
+    <text x="56" y="105" fill="#36c8dc">VISUAL MAP</text><text x="684" y="105" fill="#36c8dc">SYSTEM INFO</text>
+  </g>
+  <g font-family="Consolas,'Courier New',monospace" font-size="9" fill="#3c8797" opacity=".9">
+    <text x="54" y="140">FIG.01 / IDENTITY TRACE</text><text x="683" y="140">PROFILE.NODE / 01</text>
+  </g>
 
-  <!-- Smooth electron trails converge on the portrait. -->
+  <!-- Quiet code rain in the visual map. -->
+  <g clip-path="url(#visual)" fill="#2d92ff" font-family="Consolas,'Courier New',monospace" font-size="10" opacity=".42">
+    <g><text x="55" y="0">01<tspan x="55" y="22">{ }</tspan><tspan x="55" y="44">&lt;/&gt;</tspan><tspan x="55" y="66">10</tspan><tspan x="55" y="88">=&gt;</tspan><tspan x="55" y="110">01</tspan><tspan x="55" y="132">{ }</tspan><tspan x="55" y="154">101</tspan><tspan x="55" y="176">&lt;/&gt;</tspan><tspan x="55" y="198">010</tspan><tspan x="55" y="220">{ }</tspan><tspan x="55" y="242">10</tspan><tspan x="55" y="264">=&gt;</tspan><tspan x="55" y="286">01</tspan><tspan x="55" y="308">{ }</tspan><tspan x="55" y="330">101</tspan><tspan x="55" y="352">&lt;/&gt;</tspan><tspan x="55" y="374">01</tspan><tspan x="55" y="396">{ }</tspan><tspan x="55" y="418">10</tspan><tspan x="55" y="440">01</tspan><tspan x="55" y="462">&lt;/&gt;</tspan><tspan x="55" y="484">{ }</tspan><tspan x="55" y="506">10</tspan><tspan x="55" y="528">01</tspan><tspan x="55" y="550">=&gt;</tspan><tspan x="55" y="572">10</tspan><tspan x="55" y="594">{ }</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -180;0 0" dur="9s" repeatCount="indefinite"/></g>
+    <g opacity=".65"><text x="608" y="0">&lt;/&gt;<tspan x="608" y="22">10</tspan><tspan x="608" y="44">{ }</tspan><tspan x="608" y="66">011</tspan><tspan x="608" y="88">=&gt;</tspan><tspan x="608" y="110">01</tspan><tspan x="608" y="132">&lt;/&gt;</tspan><tspan x="608" y="154">10</tspan><tspan x="608" y="176">{ }</tspan><tspan x="608" y="198">001</tspan><tspan x="608" y="220">=&gt;</tspan><tspan x="608" y="242">&lt;/&gt;</tspan><tspan x="608" y="264">10</tspan><tspan x="608" y="286">{ }</tspan><tspan x="608" y="308">001</tspan><tspan x="608" y="330">=&gt;</tspan><tspan x="608" y="352">&lt;/&gt;</tspan><tspan x="608" y="374">01</tspan><tspan x="608" y="396">{ }</tspan><tspan x="608" y="418">101</tspan><tspan x="608" y="440">10</tspan><tspan x="608" y="462">=&gt;</tspan><tspan x="608" y="484">&lt;/&gt;</tspan><tspan x="608" y="506">{ }</tspan><tspan x="608" y="528">01</tspan><tspan x="608" y="550">10</tspan><tspan x="608" y="572">&lt;/&gt;</tspan><tspan x="608" y="594">{ }</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -310;0 0" dur="12s" begin="-4s" repeatCount="indefinite"/></g>
+  </g>
+  <g clip-path="url(#visual)" opacity=".7">
+    <rect x="35" y="118" width="610" height="620" fill="url(#scanlines)"/>
+    <rect x="35" y="-18" width="610" height="2" fill="#59ddeb" opacity=".85" filter="url(#glow)"><animate attributeName="y" values="118;738;118" dur="8s" repeatCount="indefinite"/></rect>
+  </g>
+
+  <!-- Electron paths converge on the portrait above the hacker. -->
   <g fill="none" stroke-linecap="round">
-    <path d="M590 93C724 83 799 122 961 173" stroke="#b28aff" stroke-opacity=".16" stroke-width="1.5" stroke-dasharray="4 9"/>
-    <path d="M650 418C786 426 843 354 953 304" stroke="#72ece0" stroke-opacity=".19" stroke-width="1.5" stroke-dasharray="3 10"/>
-    <path d="M785 229C843 215 888 211 957 218" stroke="#9ee9b4" stroke-opacity=".16" stroke-width="1.5" stroke-dasharray="2 9"/>
+    <path d="M670 196C587 184 493 204 415 243" stroke="#bd83ff" stroke-opacity=".3" stroke-width="1.4" stroke-dasharray="3 8"/>
+    <path d="M670 383C578 355 489 301 420 274" stroke="#62e5df" stroke-opacity=".3" stroke-width="1.4" stroke-dasharray="3 8"/>
+    <path d="M675 574C571 520 489 364 413 291" stroke="#a7f06b" stroke-opacity=".21" stroke-width="1.2" stroke-dasharray="2 9"/>
   </g>
-  <g filter="url(#electronGlow)">
-    <circle r="3.3" fill="#d7b4ff"><animateMotion dur="5.2s" repeatCount="indefinite" path="M590 93C724 83 799 122 961 173"/><animate attributeName="opacity" values="0;.9;1;.75;0" dur="5.2s" repeatCount="indefinite"/></circle>
-    <circle r="2.8" fill="#71f5e4"><animateMotion dur="4.6s" begin="-2s" repeatCount="indefinite" path="M650 418C786 426 843 354 953 304"/><animate attributeName="opacity" values="0;.9;1;.72;0" dur="4.6s" begin="-2s" repeatCount="indefinite"/></circle>
-    <circle r="2.5" fill="#c3fa9d"><animateMotion dur="4s" begin="-1s" repeatCount="indefinite" path="M785 229C843 215 888 211 957 218"/><animate attributeName="opacity" values="0;.9;1;.7;0" dur="4s" begin="-1s" repeatCount="indefinite"/></circle>
+  <g filter="url(#glow)">
+    <circle r="3" fill="#d8b4ff"><animateMotion dur="4.8s" repeatCount="indefinite" path="M670 196C587 184 493 204 415 243"/><animate attributeName="opacity" values="0;.9;1;.8;0" dur="4.8s" repeatCount="indefinite"/></circle>
+    <circle r="2.7" fill="#71f5e4"><animateMotion dur="4.4s" begin="-1.8s" repeatCount="indefinite" path="M670 383C578 355 489 301 420 274"/><animate attributeName="opacity" values="0;.9;1;.8;0" dur="4.4s" begin="-1.8s" repeatCount="indefinite"/></circle>
+    <circle r="2.5" fill="#c8f69a"><animateMotion dur="5.5s" begin="-3s" repeatCount="indefinite" path="M675 574C571 520 489 364 413 291"/><animate attributeName="opacity" values="0;.9;1;.75;0" dur="5.5s" begin="-3s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- Portrait focal point. -->
-  <g clip-path="url(#portraitClip)">
-    <rect x="925" y="68" width="340" height="378" fill="url(#card)"/>
-    <circle cx="1095" cy="209" r="180" fill="url(#portraitGlow)"/>
-    <path d="M935 394c16-80 72-120 160-120s145 40 160 120v68H935Z" fill="#20233b"/>
-    <path d="M1004 210c0-71 36-113 92-113 55 0 91 42 91 113 0 70-38 123-91 123s-92-53-92-123Z" fill="#c89282"/>
-    <path d="M992 204c4-80 39-129 104-129 62 0 99 47 103 129l-23-35-22-53-45 26-47-29-45 66-25 25Z" fill="#19192d"/>
-    <path d="M1010 218c18-18 40-21 61-10l-17 15-33 4Zm121 0c-18-18-40-21-61-10l17 15 33 4Z" fill="#1a2232"/>
-    <path d="m1035 218 22-5-14 9-8-4Zm74 0-22-5 14 9 8-4Z" fill="#78f1e2"><animate attributeName="opacity" values=".55;1;.55" dur="3.4s" repeatCount="indefinite"/></path>
-    <path d="M1095 229c-5 12-8 23-2 27" fill="none" stroke="#985f65" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
-    <path d="M1078 276c10 6 24 6 34 0" fill="none" stroke="#7d4b5d" stroke-opacity=".8" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M974 161c-29 55-25 136 3 182m230-182c29 55 25 136-3 182" fill="none" stroke="url(#neon)" stroke-width="2.5" opacity=".86"/>
+  <!-- Profile portrait: the focal image above the masked hacker. -->
+  <circle cx="340" cy="263" r="111" fill="#102638" stroke="url(#edge)" stroke-opacity=".55" stroke-width="1.5"/>
+  <g clip-path="url(#avatar)">
+    <rect x="246" y="169" width="188" height="188" fill="#12273a"/>
+    <circle cx="340" cy="240" r="112" fill="url(#portraitLight)"/>
+    <path d="M247 361c10-49 43-76 93-76s83 27 93 76v28H247Z" fill="#252b45"/>
+    <path d="M292 250c0-45 18-72 48-72s48 27 48 72c0 42-20 72-48 72s-48-30-48-72Z" fill="#c89282"/>
+    <path d="M286 246c1-49 18-79 56-79 36 0 55 30 56 79l-14-22-11-30-25 14-24-16-25 37-13 17Z" fill="#19192d"/>
+    <path d="M297 250c10-9 21-11 33-5l-9 9-19 2Zm54 0c-10-9-21-11-33-5l9 9 19 2Z" fill="#172334"/>
+    <path d="m309 250 12-3-8 6-4-3Zm30 0 12-3-8 6-4-3Z" fill="#71efe0"><animate attributeName="opacity" values=".5;1;.5" dur="3.2s" repeatCount="indefinite"/></path>
+    <path d="M247 169h188v188H247Z" fill="url(#dots)" opacity=".28"/>
   </g>
-  <rect x="925" y="68" width="340" height="378" rx="170" fill="none" stroke="url(#neon)" stroke-opacity=".68" stroke-width="2"/>
-  <circle cx="1095" cy="257" r="185" fill="none" stroke="#8aece0" stroke-opacity=".24" stroke-dasharray="2 10">
-    <animateTransform attributeName="transform" type="rotate" from="0 1095 257" to="360 1095 257" dur="38s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1095" cy="257" r="198" fill="none" stroke="#b68dff" stroke-opacity=".16" stroke-dasharray="1 14">
-    <animateTransform attributeName="transform" type="rotate" from="360 1095 257" to="0 1095 257" dur="52s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1095" cy="72" r="5" fill="#b8f898" filter="url(#electronGlow)"><animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="340" cy="263" r="101" fill="none" stroke="#6fe8da" stroke-opacity=".38" stroke-dasharray="2 7"><animateTransform attributeName="transform" type="rotate" from="0 340 263" to="360 340 263" dur="32s" repeatCount="indefinite"/></circle>
+  <circle cx="340" cy="153" r="4" fill="#aff594" filter="url(#glow)"><animate attributeName="r" values="3;5;3" dur="2.8s" repeatCount="indefinite"/></circle>
 
-  <!-- Masked hacker directly beneath the profile portrait. -->
-  <rect x="840" y="455" width="520" height="380" rx="26" fill="#101a2d" fill-opacity=".84" stroke="#7d83b1" stroke-opacity=".38"/>
-  <circle cx="1100" cy="642" r="168" fill="url(#portraitGlow)"/>
-  <g transform="translate(872 438) scale(.96)">
+  <!-- Masked hacker and warning bubble. -->
+  <g transform="translate(127 375) scale(.82)">
     <path d="M119 376c10-65 47-104 94-124l-23-95c-8-39 9-83 43-101 25-14 64-12 89 8 31 25 38 62 29 98l-20 92c53 22 90 60 101 122H119Z" fill="url(#hood)" stroke="#77749c" stroke-opacity=".65" stroke-width="2"/>
     <path d="M156 371c17-41 46-65 82-82l-6 87h-76Zm202 0c-17-41-46-65-82-82l6 87h76Z" fill="#111929" opacity=".88"/>
     <path d="M187 174c1-56 28-94 68-100 43 7 71 44 71 100 0 31-9 57-23 75l-47 24-47-24c-15-19-23-44-22-75Z" fill="#c18e80"/>
@@ -95,26 +89,48 @@
     <path d="m213 182 19-5-12 7-9-2Zm68 0-19-5 12 7 9-2Z" fill="#78f5e6"><animate attributeName="opacity" values=".6;1;.6" dur="3s" repeatCount="indefinite"/></path>
     <path d="M185 204c25-9 47-10 71-7 23-3 46-2 71 7l-12 59-59 25-60-25-11-59Z" fill="url(#mask)" stroke="#777d9c" stroke-opacity=".7" stroke-width="1.5"/>
     <path d="m206 221 20 16m72-16-20 16M231 244h49M240 256h31" stroke="#a1a2be" stroke-opacity=".42" stroke-width="2" stroke-linecap="round"/>
-    <path d="M187 160c-20 34-21 84-8 115m173-115c20 34 21 84 8 115" fill="none" stroke="url(#neon)" stroke-width="2" opacity=".75"/>
-    <path d="M142 347h-17m17 9h-10m258-9h17m-17 9h10" stroke="#72eadd" stroke-opacity=".5" stroke-linecap="round"/>
-    <g filter="url(#panelShadow)">
+    <path d="M187 160c-20 34-21 84-8 115m173-115c20 34 21 84 8 115" fill="none" stroke="url(#edge)" stroke-width="2" opacity=".75"/>
+    <g filter="url(#shadow)">
       <path d="M320 43h155a16 16 0 0 1 16 16v48a16 16 0 0 1-16 16h-66l-21 18 5-18h-73a16 16 0 0 1-16-16V59a16 16 0 0 1 16-16Z" fill="#f4f2ff"/>
       <path d="M340 58h4v36h-4z" fill="#9b69e8"/>
       <text x="355" y="83" fill="#24233d" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">Be careful.</text>
     </g>
   </g>
-  <path d="M902 810h396" stroke="#6fe9db" stroke-opacity=".12"/>
-  <path d="M1023 810h110" stroke="url(#neon)" stroke-width="2" stroke-linecap="round"><animate attributeName="opacity" values=".2;1;.2" dur="2.8s" repeatCount="indefinite"/></path>
+  <text x="340" y="715" fill="#68dce3" font-family="Consolas,'Courier New',monospace" font-size="10" text-anchor="middle" letter-spacing="2">IDENTITY / SIGNAL / 001</text>
 
-  <g font-family="Segoe UI,Arial,sans-serif">
-    <rect x="91" y="104" width="6" height="174" rx="3" fill="url(#neon)" opacity=".9"/>
-    <text x="126" y="170" fill="#f8f6ff" font-size="79" font-weight="750" letter-spacing="-3">EUGENE</text>
-    <text x="126" y="263" fill="url(#neon)" font-size="89" font-weight="750" letter-spacing="-3">PRO</text>
-    <text x="130" y="314" fill="#c8c9dc" font-size="17" letter-spacing="2.8">SOFTWARE ENGINEER · WEB DEVELOPER</text>
-    <path d="M130 350h92" stroke="url(#neon)" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="230" cy="350" r="3" fill="#aaf6c1"><animate attributeName="opacity" values="1;.25;1" dur="2.5s" repeatCount="indefinite"/></circle>
-    <text x="130" y="385" fill="#9698b4" font-size="13" letter-spacing="2">BUILD  /  LEARN  /  REPEAT</text>
+  <!-- Compact profile details; only information already shared in the profile. -->
+  <g font-family="Consolas,'Courier New',monospace">
+    <text x="687" y="176" fill="#bb83ff" font-size="17">eugene@devos</text>
+    <path d="M800 170h570" stroke="#68788d" stroke-opacity=".4" stroke-dasharray="2 5"/>
+    <text x="687" y="226" fill="#f3f5fa" font-size="34" font-weight="700" letter-spacing="1.5">EUGENE PRO</text>
+    <text x="689" y="253" fill="#a9bbcf" font-size="13" letter-spacing="1.1">SOFTWARE ENGINEER  /  WEB DEVELOPER</text>
+
+    <text x="687" y="292" fill="#52d8e6" font-size="12" font-weight="700" letter-spacing="1.7">IDENTITY</text>
+    <path d="M771 288h599" stroke="#68788d" stroke-opacity=".34" stroke-dasharray="2 5"/>
+    <text x="689" y="322" fill="#41d9e4" font-size="13">Subject</text><text x="880" y="322" fill="#edf1fa" font-size="14">NDAYISHIMIYE Eugene</text>
+    <text x="689" y="350" fill="#41d9e4" font-size="13">Handle</text><text x="880" y="350" fill="#edf1fa" font-size="14">@Neugene117</text>
+    <text x="689" y="378" fill="#41d9e4" font-size="13">Status</text><text x="880" y="378" fill="#edf1fa" font-size="14">Building · Learning</text>
+
+    <text x="687" y="419" fill="#52d8e6" font-size="12" font-weight="700" letter-spacing="1.7">TOOLCHAIN</text>
+    <path d="M787 415h583" stroke="#68788d" stroke-opacity=".34" stroke-dasharray="2 5"/>
+    <text x="689" y="450" fill="#41d9e4" font-size="13">Web</text><text x="880" y="450" fill="#edf1fa" font-size="14">JavaScript · Node.js · Express · React</text>
+    <text x="689" y="478" fill="#41d9e4" font-size="13">Build</text><text x="880" y="478" fill="#edf1fa" font-size="14">HTML · CSS · PHP · Laravel</text>
+    <text x="689" y="506" fill="#41d9e4" font-size="13">Data</text><text x="880" y="506" fill="#edf1fa" font-size="14">MySQL · PostgreSQL · Python</text>
+    <text x="689" y="534" fill="#41d9e4" font-size="13">Also</text><text x="880" y="534" fill="#edf1fa" font-size="14">Flutter · Java · C/C++ · Qt · .NET</text>
+
+    <text x="687" y="579" fill="#52d8e6" font-size="12" font-weight="700" letter-spacing="1.7">CONTACT</text>
+    <path d="M773 575h597" stroke="#68788d" stroke-opacity=".34" stroke-dasharray="2 5"/>
+    <text x="689" y="610" fill="#41d9e4" font-size="13">GitHub</text><text x="880" y="610" fill="#edf1fa" font-size="14">github.com/Neugene117</text>
+    <text x="689" y="638" fill="#41d9e4" font-size="13">Email</text><text x="880" y="638" fill="#edf1fa" font-size="14">nendayishimiye@gmail.com</text>
+    <path d="M687 670h683" stroke="#68788d" stroke-opacity=".36" stroke-dasharray="2 5"/>
+    <circle cx="694" cy="700" r="3.5" fill="#2bd5ad"><animate attributeName="opacity" values="1;.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+    <text x="707" y="704" fill="#8ea0b7" font-size="12">PROFILE  /  READY</text>
+    <text x="1366" y="704" text-anchor="end" fill="#66778b" font-size="11">EUGENE · 001</text>
   </g>
-  <g fill="#b6f3e8" opacity=".6"><circle cx="62" cy="68" r="1.6"/><circle cx="775" cy="85" r="1.5"/><circle cx="826" cy="464" r="1.7"/><circle cx="1320" cy="473" r="1.5"/></g>
-  <rect x=".75" y=".75" width="1438.5" height="858.5" rx="27.25" fill="none" stroke="#8581ae" stroke-opacity=".37" stroke-width="1.5"/>
+
+  <!-- Slow terminal scanline glides across both panes. -->
+  <g clip-path="url(#outer)" pointer-events="none">
+    <rect x="12" y="-6" width="1416" height="2" fill="#52dce7" opacity=".28" filter="url(#glow)"><animate attributeName="y" values="110;760;110" dur="11s" repeatCount="indefinite"/></rect>
+  </g>
+  <rect x="12.75" y="12.75" width="1414.5" height="764.5" rx="21" fill="none" stroke="#91a8bb" stroke-opacity=".2"/>
 </svg>
