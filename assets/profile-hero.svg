@@ -9,17 +9,41 @@
     <pattern id="scanlines" width="4" height="5" patternUnits="userSpaceOnUse"><path d="M0 4.5H4" stroke="#b6d9e8" stroke-opacity=".055"/></pattern>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" fill="none" stroke="#76d9df" stroke-opacity=".045"/></pattern>
     <filter id="glow" x="-250%" y="-250%" width="600%" height="600%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="textShadow" x="-35%" y="-120%" width="170%" height="340%"><feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#000814" flood-opacity=".9"/><feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#46dce6" flood-opacity=".22"/></filter>
     <style>
-      text{paint-order:stroke fill;stroke:#03101b;stroke-width:2.2px;stroke-linejoin:round;filter:url(#textShadow);animation:textGlow 5.8s ease-in-out infinite}
+      text{paint-order:normal;stroke:none;filter:none}
+      .revealText text{opacity:0;transform:translateY(14px);transform-box:fill-box;animation:textReveal .82s cubic-bezier(.16,1,.3,1) forwards}
+      .revealText text:nth-of-type(1){animation-delay:.08s}
+      .revealText text:nth-of-type(2){animation-delay:.14s}
+      .revealText text:nth-of-type(3){animation-delay:.20s}
+      .revealText text:nth-of-type(4){animation-delay:.26s}
+      .revealText text:nth-of-type(5){animation-delay:.32s}
+      .revealText text:nth-of-type(6){animation-delay:.38s}
+      .revealText text:nth-of-type(7){animation-delay:.44s}
+      .revealText text:nth-of-type(8){animation-delay:.50s}
+      .revealText text:nth-of-type(9){animation-delay:.56s}
+      .revealText text:nth-of-type(10){animation-delay:.62s}
+      .revealText text:nth-of-type(11){animation-delay:.68s}
+      .revealText text:nth-of-type(12){animation-delay:.74s}
+      .revealText text:nth-of-type(13){animation-delay:.80s}
+      .revealText text:nth-of-type(14){animation-delay:.86s}
+      .revealText text:nth-of-type(15){animation-delay:.92s}
+      .revealText text:nth-of-type(16){animation-delay:.98s}
+      .revealText text:nth-of-type(17){animation-delay:1.04s}
+      .revealText text:nth-of-type(18){animation-delay:1.10s}
+      .revealText text:nth-of-type(19){animation-delay:1.16s}
+      .revealText text:nth-of-type(20){animation-delay:1.22s}
+      .revealText text:nth-of-type(21){animation-delay:1.28s}
+      .revealText text:nth-of-type(22){animation-delay:1.34s}
+      .revealText text:nth-of-type(23){animation-delay:1.40s}
+      .revealText text:nth-of-type(24){animation-delay:1.46s}
+      .revealText text:nth-of-type(25){animation-delay:1.52s}
+      .revealText text:nth-of-type(26){animation-delay:1.58s}
+      .heroTitle{animation-duration:.95s}
+      .sectionTitle{animation-duration:.74s}
       .codeRain text{stroke-width:.75px;filter:url(#glow);animation:codeFlicker 4.2s ease-in-out infinite}
-      .heroTitle{animation:headlineGlow 4.8s ease-in-out infinite}
-      .sectionTitle{animation:sectionPulse 5.4s ease-in-out infinite}
-      @keyframes textGlow{0%,100%{opacity:.94}50%{opacity:1}}
-      @keyframes headlineGlow{0%,100%{opacity:.96;filter:url(#textShadow)}50%{opacity:1;filter:url(#glow)}}
-      @keyframes sectionPulse{0%,100%{opacity:.88}50%{opacity:1}}
+      @keyframes textReveal{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
       @keyframes codeFlicker{0%,100%{opacity:.36}45%{opacity:.58}70%{opacity:.44}}
-      @media (prefers-reduced-motion:reduce){text,.codeRain text,.heroTitle,.sectionTitle{animation:none}}
+      @media (prefers-reduced-motion:reduce){.revealText text,.codeRain text{opacity:1;transform:none;animation:none}}
     </style>
     <clipPath id="outer"><rect x="12" y="12" width="1416" height="766" rx="22"/></clipPath>
     <clipPath id="visual"><rect x="35" y="118" width="610" height="620" rx="18"/></clipPath>
@@ -32,7 +56,7 @@
   <rect x="12" y="12" width="1416" height="766" rx="22" fill="none" stroke="url(#edge)" stroke-width="2"/>
 
   <!-- Terminal title bar -->
-  <g font-family="Consolas,'Courier New',monospace">
+  <g class="revealText" font-family="Consolas,'Courier New',monospace">
     <circle cx="39" cy="39" r="6" fill="#ff5d68"/><circle cx="61" cy="39" r="6" fill="#ffbd4a"/><circle cx="83" cy="39" r="6" fill="#25c69a"/>
     <text x="720" y="46" text-anchor="middle" fill="#d4e7f5" font-size="17" letter-spacing="1">eugene@devos  ~  $ ./profile.sh --live</text>
     <circle cx="1337" cy="39" r="4" fill="#31dfb7"><animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/></circle>
@@ -42,10 +66,10 @@
   <!-- Two clean panes echo a terminal dashboard. -->
   <rect x="35" y="118" width="610" height="620" rx="18" fill="#07111d" fill-opacity=".8" stroke="#155268" stroke-width="1.5"/>
   <rect x="663" y="118" width="742" height="620" rx="18" fill="#07111d" fill-opacity=".82" stroke="#155268" stroke-width="1.5"/>
-  <g font-family="Consolas,'Courier New',monospace" font-size="17" font-weight="700" letter-spacing="2.4">
+  <g class="revealText" font-family="Consolas,'Courier New',monospace" font-size="17" font-weight="700" letter-spacing="2.4">
     <text x="56" y="105" fill="#36c8dc">VISUAL MAP</text><text x="684" y="105" fill="#36c8dc">SYSTEM INFO</text>
   </g>
-  <g font-family="Consolas,'Courier New',monospace" font-size="13" fill="#72dce8" opacity="1">
+  <g class="revealText" font-family="Consolas,'Courier New',monospace" font-size="13" fill="#72dce8" opacity="1">
     <text x="54" y="140">FIG.01 / IDENTITY TRACE</text><text x="683" y="140">PROFILE.NODE / 01</text>
   </g>
 
@@ -79,7 +103,7 @@
   <rect x="52" y="151" width="576" height="570" rx="14" fill="none" stroke="url(#edge)" stroke-opacity=".8" stroke-width="1.5"/>
 
   <!-- Compact profile details; only information already shared in the profile. -->
-  <g font-family="Consolas,'Courier New',monospace">
+  <g class="revealText" font-family="Consolas,'Courier New',monospace">
     <text x="687" y="177" fill="#d9b6ff" font-size="22" font-weight="700">eugene@devos</text>
     <path d="M800 170h570" stroke="#68788d" stroke-opacity=".4" stroke-dasharray="2 5"/>
     <text class="heroTitle" x="687" y="231" fill="#ffffff" font-size="54" font-weight="700" letter-spacing="1.5">EUGENE PRO</text>
