@@ -9,6 +9,18 @@
     <pattern id="scanlines" width="4" height="5" patternUnits="userSpaceOnUse"><path d="M0 4.5H4" stroke="#b6d9e8" stroke-opacity=".055"/></pattern>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0v30" fill="none" stroke="#76d9df" stroke-opacity=".045"/></pattern>
     <filter id="glow" x="-250%" y="-250%" width="600%" height="600%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="textShadow" x="-35%" y="-120%" width="170%" height="340%"><feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#000814" flood-opacity=".9"/><feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#46dce6" flood-opacity=".22"/></filter>
+    <style>
+      text{paint-order:stroke fill;stroke:#03101b;stroke-width:2.2px;stroke-linejoin:round;filter:url(#textShadow);animation:textGlow 5.8s ease-in-out infinite}
+      .codeRain text{stroke-width:.75px;filter:url(#glow);animation:codeFlicker 4.2s ease-in-out infinite}
+      .heroTitle{animation:headlineGlow 4.8s ease-in-out infinite}
+      .sectionTitle{animation:sectionPulse 5.4s ease-in-out infinite}
+      @keyframes textGlow{0%,100%{opacity:.94}50%{opacity:1}}
+      @keyframes headlineGlow{0%,100%{opacity:.96;filter:url(#textShadow)}50%{opacity:1;filter:url(#glow)}}
+      @keyframes sectionPulse{0%,100%{opacity:.88}50%{opacity:1}}
+      @keyframes codeFlicker{0%,100%{opacity:.36}45%{opacity:.58}70%{opacity:.44}}
+      @media (prefers-reduced-motion:reduce){text,.codeRain text,.heroTitle,.sectionTitle{animation:none}}
+    </style>
     <clipPath id="outer"><rect x="12" y="12" width="1416" height="766" rx="22"/></clipPath>
     <clipPath id="visual"><rect x="35" y="118" width="610" height="620" rx="18"/></clipPath>
     <clipPath id="photo"><rect x="52" y="151" width="576" height="570" rx="14"/></clipPath>
@@ -22,23 +34,23 @@
   <!-- Terminal title bar -->
   <g font-family="Consolas,'Courier New',monospace">
     <circle cx="39" cy="39" r="6" fill="#ff5d68"/><circle cx="61" cy="39" r="6" fill="#ffbd4a"/><circle cx="83" cy="39" r="6" fill="#25c69a"/>
-    <text x="720" y="44" text-anchor="middle" fill="#98a8c3" font-size="13" letter-spacing="1">eugene@devos  ~  $ ./profile.sh --live</text>
+    <text x="720" y="46" text-anchor="middle" fill="#d4e7f5" font-size="17" letter-spacing="1">eugene@devos  ~  $ ./profile.sh --live</text>
     <circle cx="1337" cy="39" r="4" fill="#31dfb7"><animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/></circle>
-    <text x="1350" y="44" fill="#54dfc3" font-size="10" letter-spacing="1.1">ONLINE</text>
+    <text x="1350" y="46" fill="#83ffe3" font-size="14" letter-spacing="1.1">ONLINE</text>
   </g>
 
   <!-- Two clean panes echo a terminal dashboard. -->
   <rect x="35" y="118" width="610" height="620" rx="18" fill="#07111d" fill-opacity=".8" stroke="#155268" stroke-width="1.5"/>
   <rect x="663" y="118" width="742" height="620" rx="18" fill="#07111d" fill-opacity=".82" stroke="#155268" stroke-width="1.5"/>
-  <g font-family="Consolas,'Courier New',monospace" font-size="12" font-weight="700" letter-spacing="2">
+  <g font-family="Consolas,'Courier New',monospace" font-size="17" font-weight="700" letter-spacing="2.4">
     <text x="56" y="105" fill="#36c8dc">VISUAL MAP</text><text x="684" y="105" fill="#36c8dc">SYSTEM INFO</text>
   </g>
-  <g font-family="Consolas,'Courier New',monospace" font-size="9" fill="#3c8797" opacity=".9">
+  <g font-family="Consolas,'Courier New',monospace" font-size="13" fill="#72dce8" opacity="1">
     <text x="54" y="140">FIG.01 / IDENTITY TRACE</text><text x="683" y="140">PROFILE.NODE / 01</text>
   </g>
 
   <!-- Quiet code rain in the visual map. -->
-  <g clip-path="url(#visual)" fill="#2d92ff" font-family="Consolas,'Courier New',monospace" font-size="10" opacity=".42">
+  <g class="codeRain" clip-path="url(#visual)" fill="#42b8ff" font-family="Consolas,'Courier New',monospace" font-size="13" opacity=".5">
     <g><text x="55" y="0">01<tspan x="55" y="22">{ }</tspan><tspan x="55" y="44">&lt;/&gt;</tspan><tspan x="55" y="66">10</tspan><tspan x="55" y="88">=&gt;</tspan><tspan x="55" y="110">01</tspan><tspan x="55" y="132">{ }</tspan><tspan x="55" y="154">101</tspan><tspan x="55" y="176">&lt;/&gt;</tspan><tspan x="55" y="198">010</tspan><tspan x="55" y="220">{ }</tspan><tspan x="55" y="242">10</tspan><tspan x="55" y="264">=&gt;</tspan><tspan x="55" y="286">01</tspan><tspan x="55" y="308">{ }</tspan><tspan x="55" y="330">101</tspan><tspan x="55" y="352">&lt;/&gt;</tspan><tspan x="55" y="374">01</tspan><tspan x="55" y="396">{ }</tspan><tspan x="55" y="418">10</tspan><tspan x="55" y="440">01</tspan><tspan x="55" y="462">&lt;/&gt;</tspan><tspan x="55" y="484">{ }</tspan><tspan x="55" y="506">10</tspan><tspan x="55" y="528">01</tspan><tspan x="55" y="550">=&gt;</tspan><tspan x="55" y="572">10</tspan><tspan x="55" y="594">{ }</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -180;0 0" dur="9s" repeatCount="indefinite"/></g>
     <g opacity=".65"><text x="608" y="0">&lt;/&gt;<tspan x="608" y="22">10</tspan><tspan x="608" y="44">{ }</tspan><tspan x="608" y="66">011</tspan><tspan x="608" y="88">=&gt;</tspan><tspan x="608" y="110">01</tspan><tspan x="608" y="132">&lt;/&gt;</tspan><tspan x="608" y="154">10</tspan><tspan x="608" y="176">{ }</tspan><tspan x="608" y="198">001</tspan><tspan x="608" y="220">=&gt;</tspan><tspan x="608" y="242">&lt;/&gt;</tspan><tspan x="608" y="264">10</tspan><tspan x="608" y="286">{ }</tspan><tspan x="608" y="308">001</tspan><tspan x="608" y="330">=&gt;</tspan><tspan x="608" y="352">&lt;/&gt;</tspan><tspan x="608" y="374">01</tspan><tspan x="608" y="396">{ }</tspan><tspan x="608" y="418">101</tspan><tspan x="608" y="440">10</tspan><tspan x="608" y="462">=&gt;</tspan><tspan x="608" y="484">&lt;/&gt;</tspan><tspan x="608" y="506">{ }</tspan><tspan x="608" y="528">01</tspan><tspan x="608" y="550">10</tspan><tspan x="608" y="572">&lt;/&gt;</tspan><tspan x="608" y="594">{ }</tspan></text><animateTransform attributeName="transform" type="translate" values="0 -310;0 0" dur="12s" begin="-4s" repeatCount="indefinite"/></g>
   </g>
@@ -65,39 +77,35 @@
     <rect x="52" y="151" width="576" height="570" fill="url(#scanlines)" opacity=".2"/>
   </g>
   <rect x="52" y="151" width="576" height="570" rx="14" fill="none" stroke="url(#edge)" stroke-opacity=".8" stroke-width="1.5"/>
-  <rect x="65" y="167" width="128" height="24" rx="12" fill="#07111d" fill-opacity=".8" stroke="#43d6d8" stroke-opacity=".55"/>
-  <circle cx="79" cy="179" r="3" fill="#47dfbe"><animate attributeName="opacity" values="1;.3;1" dur="2.2s" repeatCount="indefinite"/></circle>
-  <text x="90" y="183" fill="#c0e3e5" font-family="Consolas,'Courier New',monospace" font-size="9" letter-spacing="1.2">EUGENE / LIVE</text>
-  <text x="340" y="715" fill="#e4f3f5" font-family="Consolas,'Courier New',monospace" font-size="11" text-anchor="middle" letter-spacing="2">BE CAREFUL · STAY CURIOUS</text>
 
   <!-- Compact profile details; only information already shared in the profile. -->
   <g font-family="Consolas,'Courier New',monospace">
-    <text x="687" y="176" fill="#bb83ff" font-size="17">eugene@devos</text>
+    <text x="687" y="177" fill="#d9b6ff" font-size="22" font-weight="700">eugene@devos</text>
     <path d="M800 170h570" stroke="#68788d" stroke-opacity=".4" stroke-dasharray="2 5"/>
-    <text x="687" y="226" fill="#f3f5fa" font-size="34" font-weight="700" letter-spacing="1.5">EUGENE PRO</text>
-    <text x="689" y="253" fill="#a9bbcf" font-size="13" letter-spacing="1.1">SOFTWARE ENGINEER  /  WEB DEVELOPER</text>
+    <text class="heroTitle" x="687" y="231" fill="#ffffff" font-size="54" font-weight="700" letter-spacing="1.5">EUGENE PRO</text>
+    <text x="689" y="267" fill="#d2e0ef" font-size="19" font-weight="700" letter-spacing="1.1">SOFTWARE ENGINEER  /  WEB DEVELOPER</text>
 
-    <text x="687" y="292" fill="#52d8e6" font-size="12" font-weight="700" letter-spacing="1.7">IDENTITY</text>
-    <path d="M771 288h599" stroke="#68788d" stroke-opacity=".34" stroke-dasharray="2 5"/>
-    <text x="689" y="322" fill="#41d9e4" font-size="13">Subject</text><text x="880" y="322" fill="#edf1fa" font-size="14">NDAYISHIMIYE Eugene</text>
-    <text x="689" y="350" fill="#41d9e4" font-size="13">Handle</text><text x="880" y="350" fill="#edf1fa" font-size="14">@Neugene117</text>
-    <text x="689" y="378" fill="#41d9e4" font-size="13">Status</text><text x="880" y="378" fill="#edf1fa" font-size="14">Building · Learning</text>
+    <text class="sectionTitle" x="687" y="312" fill="#76f3ff" font-size="17" font-weight="700" letter-spacing="1.7">IDENTITY</text>
+    <path d="M792 308h578" stroke="#87a8bb" stroke-opacity=".42" stroke-dasharray="2 5"/>
+    <text x="689" y="344" fill="#70f5ff" font-size="16" font-weight="700">Subject</text><text x="880" y="344" fill="#ffffff" font-size="19" font-weight="700">NDAYISHIMIYE Eugene</text>
+    <text x="689" y="375" fill="#70f5ff" font-size="16" font-weight="700">Handle</text><text x="880" y="375" fill="#ffffff" font-size="19" font-weight="700">@Neugene117</text>
+    <text x="689" y="406" fill="#70f5ff" font-size="16" font-weight="700">Status</text><text x="880" y="406" fill="#ffffff" font-size="19" font-weight="700">Building / Learning</text>
 
-    <text x="687" y="419" fill="#52d8e6" font-size="12" font-weight="700" letter-spacing="1.7">TOOLCHAIN</text>
-    <path d="M787 415h583" stroke="#68788d" stroke-opacity=".34" stroke-dasharray="2 5"/>
-    <text x="689" y="450" fill="#41d9e4" font-size="13">Web</text><text x="880" y="450" fill="#edf1fa" font-size="14">JavaScript · Node.js · Express · React</text>
-    <text x="689" y="478" fill="#41d9e4" font-size="13">Build</text><text x="880" y="478" fill="#edf1fa" font-size="14">HTML · CSS · PHP · Laravel</text>
-    <text x="689" y="506" fill="#41d9e4" font-size="13">Data</text><text x="880" y="506" fill="#edf1fa" font-size="14">MySQL · PostgreSQL · Python</text>
-    <text x="689" y="534" fill="#41d9e4" font-size="13">Also</text><text x="880" y="534" fill="#edf1fa" font-size="14">Flutter · Java · C/C++ · Qt · .NET</text>
+    <text class="sectionTitle" x="687" y="447" fill="#76f3ff" font-size="17" font-weight="700" letter-spacing="1.7">TOOLCHAIN</text>
+    <path d="M800 443h570" stroke="#87a8bb" stroke-opacity=".42" stroke-dasharray="2 5"/>
+    <text x="689" y="482" fill="#70f5ff" font-size="16" font-weight="700">Web</text><text x="880" y="482" fill="#ffffff" font-size="18" font-weight="700">JavaScript / Node.js / Express / React</text>
+    <text x="689" y="513" fill="#70f5ff" font-size="16" font-weight="700">Build</text><text x="880" y="513" fill="#ffffff" font-size="18" font-weight="700">HTML / CSS / PHP / Laravel</text>
+    <text x="689" y="544" fill="#70f5ff" font-size="16" font-weight="700">Data</text><text x="880" y="544" fill="#ffffff" font-size="18" font-weight="700">MySQL / PostgreSQL / Python</text>
+    <text x="689" y="575" fill="#70f5ff" font-size="16" font-weight="700">Also</text><text x="880" y="575" fill="#ffffff" font-size="18" font-weight="700">Flutter / Java / C/C++ / Qt / .NET</text>
 
-    <text x="687" y="579" fill="#52d8e6" font-size="12" font-weight="700" letter-spacing="1.7">CONTACT</text>
-    <path d="M773 575h597" stroke="#68788d" stroke-opacity=".34" stroke-dasharray="2 5"/>
-    <text x="689" y="610" fill="#41d9e4" font-size="13">GitHub</text><text x="880" y="610" fill="#edf1fa" font-size="14">github.com/Neugene117</text>
-    <text x="689" y="638" fill="#41d9e4" font-size="13">Email</text><text x="880" y="638" fill="#edf1fa" font-size="14">nendayishimiye@gmail.com</text>
-    <path d="M687 670h683" stroke="#68788d" stroke-opacity=".36" stroke-dasharray="2 5"/>
+    <text class="sectionTitle" x="687" y="620" fill="#76f3ff" font-size="17" font-weight="700" letter-spacing="1.7">CONTACT</text>
+    <path d="M786 616h584" stroke="#87a8bb" stroke-opacity=".42" stroke-dasharray="2 5"/>
+    <text x="689" y="653" fill="#70f5ff" font-size="16" font-weight="700">GitHub</text><text x="880" y="653" fill="#ffffff" font-size="18" font-weight="700">github.com/Neugene117</text>
+    <text x="689" y="684" fill="#70f5ff" font-size="16" font-weight="700">Email</text><text x="880" y="684" fill="#ffffff" font-size="18" font-weight="700">nendayishimiye@gmail.com</text>
+    <path d="M687 710h683" stroke="#87a8bb" stroke-opacity=".42" stroke-dasharray="2 5"/>
     <circle cx="694" cy="700" r="3.5" fill="#2bd5ad"><animate attributeName="opacity" values="1;.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
-    <text x="707" y="704" fill="#8ea0b7" font-size="12">PROFILE  /  READY</text>
-    <text x="1366" y="704" text-anchor="end" fill="#66778b" font-size="11">EUGENE · 001</text>
+    <text x="707" y="704" fill="#b7cbe2" font-size="15" font-weight="700">PROFILE  /  READY</text>
+    <text x="1366" y="704" text-anchor="end" fill="#91a6bd" font-size="14" font-weight="700">EUGENE / 001</text>
   </g>
 
   <!-- Slow terminal scanline glides across both panes. -->
